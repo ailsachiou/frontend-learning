@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+.navbar {
+  position: fixed;
+  background-color: black;
+  box-shadow: 0px 4px 8px 0px rgb(130, 130, 130);
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 1;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+.choice-button {
+  width: 110px;
+  height: 100%;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choice-button:hover {
+  background-color: gray;
+  color: black;
+  font-size: 20px;
+  transition: 0s;
+}
+.right-choice-button,
+.right-number,
+.submit-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.search {
+  width: 100px;
+  height: 100%;
+  color: white;
+  align-items: center;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10;
+}
+.search:hover {
+  background-color: rgb(221, 91, 91);
+}
+.img {
+  width: 100%;
+  /*   height: 700px; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.location-block {
+  position: absolute;
+  margin-bottom: 50px;
+}
+.location {
+  color: beige;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+.l-introduce {
+  color: beige;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+.main-wrapper-1 {
+  width: 100%;
+  height: 100%;
+  padding: 50px 150px;
+  background-color: rgb(250, 248, 246);
+}
+.title-1 {
+  font-size: 28px;
+  color: black;
+  padding: 15px 0px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.sub-title {
+  font-size: 18px;
+  color: rgb(163, 163, 163);
+  padding: 15px 0px 25px 0;
+  text-align: center;
+  font-style: italic;
+}
+.p {
+  font-size: 18px;
+  color: black;
+  padding: 15px 10px;
+  text-align: justify;
+}
+.member-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.member-block {
+  width: 200px;
+  height: 250px;
+  margin: 15px 15px;
+}
+.m-name {
+  font-size: large;
+  margin: 10px 0px;
+}
+.m-photo,
+.city-photo {
+  width: 100%;
+}
+.main-wrapper-2 {
+  width: 100%;
+  height: 100%;
+  padding: 50px 150px;
+  background-color: black;
+}
+.title-2 {
+  font-size: 28px;
+  color: white;
+  padding: 15px 0px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.left-ticket {
+  border-bottom: 1px solid gray;
+  background-color: white;
+  width: 100%;
+  height: 30px;
+}
+.month {
+  height: 30px;
+  color: grey;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px;
+}
+.sold-out-block {
+  width: 80px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 15px;
+}
+.left-ticket-number {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+.ticket-choice-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.ticket-choice-block {
+  width: 350px;
+  height: 450px;
+  margin: 15px 3px;
+  background-color: white;
+}
+.city {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+.date {
+  color: rgb(163, 163, 163);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+}
+.p-ticket {
+  font-size: 18px;
+  color: black;
+  margin: 10px;
+  text-align: justify;
+}
+.buy-ticket-button {
+  background-color: black;
+  width: 160px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.buy-ticket-button:hover {
+  background-color: rgb(176, 176, 176);
+  width: 160px;
+  height: 40px;
+  font-size: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.contact-block {
+  width: 50%;
+  margin: 0 100px;
+  font-size: 20px;
+  white-space: nowrap;
+}
+.input-block {
+  width: 50%;
+  margin: 0 100px;
+  font-size: 20px;
+}
+.input-content-1 {
+  width: 180px;
+  height: 40px;
+  text-align: left;
+}
+.input-content-2 {
+  width: 365px;
+  height: 40px;
+  text-align: left;
+  margin-top: 10;
+}
+.submit-button {
+  width: 70px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+}
+.submit-button:hover {
+  width: 70px;
+  height: 35px;
+  cursor: pointer;
+  margin-top: 20px;
+  border: 0;
+  background-color: rgb(220, 220, 220);
+  color: black;
+}
+.last-img {
+  width: 100%;
+}
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-link {
+  color: rgb(7, 132, 241);
+  margin-left: 10;
+}

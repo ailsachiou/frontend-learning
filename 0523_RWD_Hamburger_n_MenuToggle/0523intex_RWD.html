@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,
+    initial-scale=1.0,maximum-scale=1.0, user-scalable=no"
+    />
+    <title>0523RWD_DEMO</title>
+    <link rel="stylesheet" href="./0523_RWD.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left-title">
+        <div>Logo</div>
+      </div>
+      <div class="right-title">
+        <div class="title-item">Home</div>
+        <div class="title-item">About</div>
+        <div class="title-item">Gallery</div>
+        <div class="title-item">Product</div>
+        <div class="title-item">Contact</div>
+        <div class="hamburger" onclick="menuToggle()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="fullscreen-menu"></div>
+      </div>
+    </div>
+
+    <script>
+      let showMenu = false;
+      const menu = document.querySelector(".fullscreen-menu");
+
+      const menuToggle = () => {
+        if (showMenu === true) {
+          // 把選單關起來
+          menu.classList.remove("open");
+          showMenu = false;
+        } else {
+          //  把選單打開
+          menu.classList.add("open");
+          showMenu = true;
+        }
+        console.log(showMenu);
+      };
+    </script>
+  </body>
+</html>

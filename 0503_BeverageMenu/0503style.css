@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+.background {
+  width: 450px;
+  height: 830px;
+  background-color: #fedd03;
+  font-family: MV boli, ariel rounded MT;
+  color: #e92769;
+  position: relative;
+  padding: 25px;
+}
+.menu {
+  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-container {
+  font-weight: bold;
+  width: 60%;
+}
+.menu-title-ch {
+  font-size: 28px;
+}
+.menu-title-eng {
+  font-size: 18px;
+  font-family: Arial;
+}
+.capacity-container {
+  text-align: center;
+  margin-top: 25px;
+  width: 20%;
+}
+.capacity-ch,
+.capacity-eng {
+  font-size: 15.5px;
+  font-weight: bold;
+  font-family: Arial;
+}
+.blue-line {
+  width: 100%;
+  height: 2px;
+  background-color: #6de8da;
+  margin-top: 7px;
+  border-radius: 5px;
+}
+.main-option-block {
+  margin: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drink-option-container {
+  width: 61%;
+}
+.drink-name-ch {
+  font-size: 18px;
+  font-weight: bold;
+}
+.drink-name-eng {
+  font-size: 16px;
+  font-weight: bold;
+}
+.hotncold {
+  font-size: 10.5px;
+}
+.price {
+  width: 25%;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.pink-backgroud {
+  width: 400px;
+  height: 90px;
+  background-color: #e92769;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+.upgrade-option-block {
+  width: 100%;
+  font-size: 10.5px;
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+  justify-content: space-around;
+}
+.upgrade-ch,
+.upgrade-eng {
+  color: #fedd03;
+  font-family: Arial;
+}
+.option-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.option {
+  color: aliceblue;
+}
+.upgrade-price {
+  width: 10%;
+  color: aliceblue;
+  display: flex;
+  justify-content: flex-end;
+}

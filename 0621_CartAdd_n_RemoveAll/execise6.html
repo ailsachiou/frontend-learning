@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./execise6.css" />
+    <title>購物車增加/刪除</title>
+  </head>
+  <body style="font-size: 20px">
+    <div>商品區</div>
+    <div class="products-area"></div>
+    <!-- cart-title可有可無 -->
+    <div class="cart-title">購物車內容</div>
+    <!-- cart 與 清空購物車按鈕的順序會影響按鈕位置 -->
+    <div class="cart"></div>
+    <button onclick="removeAll()">清空購物車</button>
+
+    <script>
+      let products = ["coffee", "tea", "herbal fusion"];
+
+      const productsArea = document.querySelector(".products-area");
+
+      const cart = document.querySelector(".cart");
+
+      function beverageProducts() {
+        for (let i = 0; i < products.length; i++) {
+          const products_name = products[i];
+          beverageProductsItem(products_name);
+        }
+      }
+
+      function beverageProductsItem(products_name) {
+        const div = document.createElement("div");
+        div.classList.add("product-container");
+        const div_text = document.createTextNode(products_name);
+
+        const button = document.createElement("button");
+
+        button.addEventListener("click", function () {
+          addToCart(products_name);
+        });
+
+        button.classList.add("add-button");
+        const button_text = document.createTextNode("加入購物車");
+        button.appendChild(button_text);
+
+        div.appendChild(div_text);
+        div.appendChild(button);
+        productsArea.appendChild(div);
+      }
+
+      function addToCart(products_name) {
+        const cart_item = document.createElement("div");
+        cart_item.classList.add("cart-item");
+        const cart_item_text = document.createTextNode(products_name);
+        cart_item.appendChild(cart_item_text);
+        cart.appendChild(cart_item);
+      }
+
+      function removeAll() {
+        cart.innerHTML = "";
+      }
+      products.push("fresh squeezed juice");
+
+      beverageProducts();
+    </script>
+  </body>
+</html>

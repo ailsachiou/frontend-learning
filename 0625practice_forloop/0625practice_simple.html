@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no"
+    />
+    <title>0625practice</title>
+  </head>
+  <body>
+    <button onclick="appendProducts()">買ABC</button>
+
+    <button onclick="remove()">刪除選項</button>
+    <div class="cart"></div>
+
+    <script>
+      let products = ["A", "B", "C", "D", "E"];
+
+      const cart = document.querySelector(".cart");
+
+      let arrayIndex = 0;
+
+      function appendProducts() {
+        const div = document.createElement("div");
+        div.classList.add("product-name");
+        const product_name_text = document.createTextNode(products[arrayIndex]);
+        div.appendChild(product_name_text);
+        cart.appendChild(div);
+
+        arrayIndex += 1;
+        if (arrayIndex === products.length) {
+          arrayIndex = 0;
+        }
+      }
+
+      function remove() {
+        // 如果要讓每次刪除購物車內容時，i都歸零，要加這行
+        // arrayIndex = 0;
+        cart.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

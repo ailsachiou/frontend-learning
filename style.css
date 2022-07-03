@@ -21,7 +21,7 @@
 .area {
   width: 700px;
   height: 350px;
-  margin: 50px 20px;
+  margin: 30px 20px 0 20px;
   background-color: rgb(250, 248, 246);
 }
 
@@ -34,14 +34,16 @@
   align-items: center;
   display: inline-block;
   margin: 10px 5px;
+  padding: 0 8px;
 }
 
 .block {
-  width: 200px;
+  width: 350px;
   height: 60px;
   background-color: rgb(249, 221, 62);
   font-size: 18px;
   display: flex;
   align-items: center;
-  margin: 7px 20px 0 0;
+  margin: 10px 20px 0 5px;
+  padding-left: 8px;
 }

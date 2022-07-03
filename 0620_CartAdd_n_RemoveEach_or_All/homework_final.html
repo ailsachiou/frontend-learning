@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no"
+    />
+    <title>0620homework購物車增減</title>
+    <link rel="stylesheet" href="./0620homework.css" />
+  </head>
+  <body>
+    <div>Living Room Goods</div>
+    <!-- <button onclick="">加入購物車</button> -->
+    <div class="product-area"></div>
+    <div>購物車區</div>
+    <div class="cart">
+      <!-- <button onclick="removeFromCart()">刪除單一內容</button> -->
+    </div>
+
+    <button onclick="removeAll2()">刪除全部內容</button>
+
+    <script>
+      let products = [
+        "單人小沙發",
+        "兩人座沙發",
+        "三人大沙發",
+        "客廳矮桌",
+        "電視櫃",
+      ];
+
+      const product_area = document.querySelector(".product-area");
+      const cart = document.querySelector(".cart");
+
+      function livingRoomGoods() {
+        for (let i = 0; i < products.length; i++) {
+          let product_name = products[i];
+          livingRoomGoodsItem(product_name);
+        }
+      }
+
+      function livingRoomGoodsItem(product_name) {
+        const div = document.createElement("div");
+        div.classList.add("chosen-area");
+        const div_text = document.createTextNode(product_name);
+        div.appendChild(div_text);
+
+        const button = document.createElement("button");
+        button.classList.add("add-button");
+        const button_text = document.createTextNode("加入購物車");
+        button.appendChild(button_text);
+        div.appendChild(button);
+
+        button.addEventListener("click", function () {
+          addToCart(product_name);
+        });
+
+        product_area.appendChild(div);
+      }
+
+      function addToCart(input_name) {
+        const div = document.createElement("div");
+        div.classList.add("cart-item");
+        const cart_item_text = document.createTextNode(input_name);
+        div.appendChild(cart_item_text);
+
+        const button = document.createElement("button");
+        button.classList.add("delete-button");
+        const button_text = document.createTextNode("刪除單一選項");
+        button.appendChild(button_text);
+        div.appendChild(button);
+
+        cart.appendChild(div);
+
+        button.addEventListener("click", function () {
+          let delete_each = cart.removeChild(div);
+
+          // cartArray.splice(i, 1);
+        });
+      }
+
+      function removeAll() {
+        cart.innerHTML = "";
+      }
+
+      function removeAll2() {
+        cartArray = [];
+        removeAll();
+      }
+
+      livingRoomGoods();
+    </script>
+  </body>
+</html>
